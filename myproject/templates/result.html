@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+
+	<header>
+	  <div class="container">
+	    <div class="jumbotron text-center m-t-20">
+	      <h3> Spam Detection </h3>
+	    </div>
+
+	</div>
+	</header>
+
+
+	<table class="table table-striped table-dark" >
+	<thead>
+		<tr>
+			<th scope="col">Messages</th>
+			<th scope="col">Spam/Not Spam</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{% for spam in spam_messages %}
+			<li>{{spam}}</li>
+			{% endfor %}</td>
+			<td>{% for sp in spamham %}
+			<li>{{sp}}</li>
+			{% endfor %}</td>
+		</tr>
+	</tbody></table>
+
+</body>
+{% endblock %}

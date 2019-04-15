@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<div class="jumbotron text-center">
+		<h3> sentiment analysis </h3>
+	</div>
+</div>
+
+<div class="ml-container">
+
+	<form action="{{ url_for('add_review')}}" method="POST">
+
+	<!-- <input type="text" name="comment"/> -->
+	<textarea name="movietextcolumn" rows="4" cols="50" required></textarea>
+	<br/>
+
+	<input type="submit" class="btn btn-primary" value="Predict">
+
+</form>
+
+</div>
+{% endblock %}

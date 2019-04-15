@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+  <div class="container">
+    <div class="jumbotron text-center m-t-20">
+      <h3> Spam Detection </h3>
+    </div>
+
+</div>
+</header>
+<div class="container">
+<div class="ml-container">
+
+  <form action="{{ url_for('spam_message_dir')}}" method="POST">
+    <div class="form-group">
+      <label>Enter Your Comment Here</label>
+      <!-- <input type="text" name="comment"/> -->
+      <textarea class="form-control"  name="spam_messages_column" rows="4" cols="50" required></textarea>
+    </div>
+  <br/>
+
+  <input type="submit" class="btn btn-primary" value="Predict">
+
+</form>
+
+</div>
+</div>
+{% endblock %}
